@@ -23,11 +23,69 @@
 
 .artwork-list {
     &__item {
+        position: relative;
         margin: 1.5rem 0;
     }
 
     &__item:nth-child(even) {
         text-align: right;
+    }
+
+    &__item:nth-child(even)::before {
+        content: ' ';
+        border: 5px solid #000;
+        border-top: 0;
+        border-right: 0;
+        position: absolute;
+        top: -30%;
+        left: 0;
+        height: 80%;
+        width: 45%;
+        border-bottom-left-radius: 10px;
+    }
+
+    &__item:nth-child(even)::after {
+        content: ' ';
+        border: 5px solid #000;
+        transform: rotate(45deg);
+        position: absolute;
+        left: 38%; /* use proper measures */
+        top: 33%; /* use proper measures */
+        width: 20px;
+        height: 20px;
+        border-left: 0;
+        border-bottom: 0;
+
+    }
+
+    &__item:nth-child(odd)::before {
+        content: ' ';
+        border: 5px solid #000;
+        border-top: 0;
+        border-left: 0;
+        position: absolute;
+        top: -30%;
+        right: 0;
+        height: 100%;
+        width: 7%;
+        border-bottom-right-radius: 10px;
+    }
+
+    &__item:nth-child(odd)::after {
+        content: ' ';
+        border: 5px solid #000;
+        transform: rotate(45deg);
+        position: absolute;
+        right: 1%; /* use proper measures */
+        top: 58%; /* use proper measures */
+        width: 20px;
+        height: 20px;
+        border-top: 0;
+        border-right: 0;
+    }
+
+    &__item:nth-child(1)::before, &__item:nth-child(1)::after {
+        display: none;
     }
 }
 
