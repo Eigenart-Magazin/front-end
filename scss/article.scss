@@ -7,3 +7,10 @@
     margin: 1rem 0;
     line-height: 1.4rem;
 }
+
+.header small {
+    display: block;
+    position: relative;
+    left: calc(100vw - 60vw - 5vw);
+    width: 60vw;
+}
