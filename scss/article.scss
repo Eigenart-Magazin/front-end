@@ -14,3 +14,37 @@
     left: calc(100vw - 60vw - 5vw);
     width: 60vw;
 }
+
+.pill {
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 3px;
+}
+
+.artwork-list {
+    &__item {
+        margin: 1.5rem 0;
+    }
+
+    &__item:nth-child(even) {
+        text-align: right;
+    }
+}
+
+.artwork-item {
+    display: inline-block;
+    text-align: initial;
+
+    &__author {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .pill {
+        margin-left: 12px;
+    }
+}
+
+.artwork-item::odd {
+    text-align: right;
+}
