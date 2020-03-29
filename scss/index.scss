@@ -1,0 +1,7 @@
+@import 'variables.scss';
+
+.hello {
+    &__world {
+        background: $black;
+    }
+}
