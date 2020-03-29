@@ -17,8 +17,9 @@ $font-size-paragraph: 18px;
     src: url('/assets/fonts/Apercu\ Bold.otf');
 }
 
-* {
+:root {
     word-break: break-word;
+    font-size: $font-size-paragraph;
 }
 
 body, p, span, a, strong, b, u, i {
@@ -33,6 +34,7 @@ h1, h2, h3, h4, h5, h6, strong, b {
 
 h1 {
     font-size: $font-size-primary-heading;
+    margin: .8rem 0;
 }
 
 h2 {
