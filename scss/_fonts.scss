@@ -1,0 +1,44 @@
+$font-size-primary-heading: 34px;
+$font-size-secondary-heading: 26px;
+$font-size-tertiary-heading: 16px;
+$font-size-paragraph: 18px;
+
+@font-face {
+    font-family: 'Apercu Regular';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/assets/fonts/Apercu\ Regular.otf');
+}
+
+@font-face {
+    font-family: 'Apercu Bold';
+    font-style: normal;
+    font-weight: bold;
+    src: url('/assets/fonts/Apercu\ Bold.otf');
+}
+
+* {
+    word-break: break-word;
+}
+
+body, p, span, a, strong, b, u, i {
+    font-family: 'Apercu Regular';
+    font-size: $font-size-paragraph;
+    font-weight: normal;
+}
+
+h1, h2, h3, h4, h5, h6, strong, b {
+    font-family: 'Apercu Bold';
+}
+
+h1 {
+    font-size: $font-size-primary-heading;
+}
+
+h2 {
+    font-size: $font-size-secondary-heading;
+}
+
+h3 {
+    font-size: $font-size-tertiary-heading;
+}

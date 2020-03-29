@@ -1,7 +1,2 @@
-@import 'variables.scss';
-
-.hello {
-    &__world {
-        background: $black;
-    }
-}
+@import '_reset.scss';
+@import '_fonts.scss';
