@@ -7,14 +7,14 @@ $font-size-paragraph: 18px;
     font-family: 'Apercu Regular';
     font-style: normal;
     font-weight: 400;
-    src: url('/assets/fonts/Apercu\ Regular.otf');
+    src: url('../assets/fonts/Apercu\ Regular.otf');
 }
 
 @font-face {
     font-family: 'Apercu Bold';
     font-style: normal;
     font-weight: bold;
-    src: url('/assets/fonts/Apercu\ Bold.otf');
+    src: url('../assets/fonts/Apercu\ Bold.otf');
 }
 
 :root {
@@ -22,7 +22,7 @@ $font-size-paragraph: 18px;
     font-size: $font-size-paragraph;
 }
 
-body, p, span, a, strong, b, u, i {
+body, p, span, a, strong, b, u, i, ol, ul, li {
     font-family: 'Apercu Regular';
     font-size: $font-size-paragraph;
     font-weight: normal;
