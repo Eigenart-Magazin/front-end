@@ -1,0 +1,72 @@
+.artwork-list {
+    &__item {
+        position: relative;
+        margin: 1.5rem 0;
+
+        display: flex;
+    }
+
+    &__item:nth-child(1) {
+        &::after, &::before {
+            content: '';
+            display: none;
+        }
+
+        .arrow {
+            display: none;
+        }
+    }
+
+    &__item:nth-child(odd) {
+        &::after {
+            content: ' ';
+            flex-grow: 1;
+            min-width: 60px;
+        }
+
+        .arrow {
+            left: 100%;
+            transform: translateY(-50%) rotate(225deg);
+        }
+    }
+
+    &__item:nth-child(even) {
+        &::before {
+            content: ' ';
+            flex-grow: 1;
+            min-width: 60px;
+        }
+    }
+}
+
+.artwork-item {
+    position: relative;
+    display: inline-block;
+    text-align: initial;
+
+    &__author {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .arrow {
+        position: absolute;
+        width: 38px;
+        height: 38px;
+        border: 8px solid #000;
+
+        top: 50%;
+        left: -50%;
+        transform: translateY(-50%) rotate(45deg);
+
+        border-left: 0;
+        border-bottom: 0;
+
+        &::before {
+            content: ' ';
+            width: 100%;
+            height: 8px;
+            background: black;
+        }
+    }
+}

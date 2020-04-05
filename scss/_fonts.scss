@@ -32,7 +32,7 @@ h1, h2, h3, h4, h5, h6, strong, b {
     font-family: 'Apercu Bold';
 }
 
-h1 {
+h1, h2, h3, h4, h5, h6 {
     font-size: $font-size-primary-heading;
     margin: .8rem 0;
 }
