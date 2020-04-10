@@ -130,3 +130,48 @@ html, body {
     border-radius: 10px;
     font-size: .8rem;
 }
+
+.carousel {
+    white-space: nowrap;
+    overflow: hidden;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    
+    &::before, &::after {
+        position: absolute;
+        top: calc(50% - 1rem);
+        font-size: 2rem;
+        color: #fff;
+    }
+
+    &::before {
+        content: '<-';
+        left: 0;
+    }
+
+    &::after {
+        content: '->';
+        right: 0;
+    }
+
+    img {
+        scroll-snap-align: start;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.article {
+    &__title, &__lead, &__author {
+        display: block;
+        text-align: center;
+    }
+
+    &__author {
+        margin: 10px 0;
+    }
+
+    &__paragraph {
+        margin: 20px;
+    }
+}
