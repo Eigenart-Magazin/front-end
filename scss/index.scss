@@ -4,6 +4,10 @@
 
 @import 'container.scss';
 
+html, body {
+    height: 100%;
+}
+
 .header {
     padding: 10px;
     border-bottom: 2px solid #000;
@@ -28,6 +32,7 @@
     background: $background-color-inverted;
     text-align: center;
     padding: 1px 0;
+    height: 100px;
 
     &__copyright {
         display: inline-block;
@@ -48,6 +53,32 @@
             font-size: .7rem;
             color: $primary-text-color-inverted;
             text-decoration: none;
+        }
+    }
+}
+
+.container {
+    min-height: 80%;
+    margin-bottom: -100px;
+}
+
+.category-list {
+    &__item {
+        display: flex;
+        margin: 2rem 0;
+
+        span {
+            font-size: 4rem;
+        }
+
+        &:nth-child(odd)::before {
+            content: ' ';
+            flex-grow: 1;
+        }
+
+        &:nth-child(even)::after {
+            content: ' ';
+            flex-grow: 1;
         }
     }
 }
