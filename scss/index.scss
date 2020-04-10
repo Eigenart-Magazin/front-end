@@ -107,6 +107,11 @@ html, body {
     &__author {
         font-size: 15px;
     }
+
+    a {
+        text-decoration: none;
+        color: $primary-text-color;
+    }
 }
 
 .editorial {
