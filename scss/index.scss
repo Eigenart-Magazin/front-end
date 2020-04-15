@@ -10,6 +10,8 @@ html, body {
 }
 
 .header {
+    color: $primary-text-color-inverted;
+    background-color: $background-color-inverted;
     padding: 10px 10px 0 10px;
     border-bottom: 2px solid #000;
     
@@ -24,8 +26,8 @@ html, body {
     }
 
     &__marquee {
-        background-color: $background-color-inverted;
-        color: $primary-text-color-inverted;
+        background-color: $background-color;
+        color: $primary-text-color;
         border-radius: 10px;
         padding: 5px;
         align-self: center;
@@ -35,9 +37,14 @@ html, body {
 }
 
 .footer {
+    background-color: $background-color-inverted;
     text-align: center;
     padding: 1px 0;
     height: 100px;
+
+    * {
+        color: $primary-text-color-inverted;
+    }
 
     &__copyright {
         display: inline-block;
@@ -130,37 +137,58 @@ html, body {
 }
 
 .carousel {
-    white-space: nowrap;
-    overflow: hidden;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
+    position: relative;
+
+    &__images {
+        white-space: nowrap;
+        overflow: hidden;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        
+        &::before, &::after {
+            position: absolute;
+            top: calc(50% - 1rem);
+            font-size: 2rem;
+            color: #fff;
+        }
     
-    &::before, &::after {
+        &::before {
+            content: '<-';
+            left: 0;
+        }
+    
+        &::after {
+            content: '->';
+            right: 0;
+        }
+    
+        img {
+            scroll-snap-align: start;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__bullet-list {
+        display: flex;
         position: absolute;
-        top: calc(50% - 1rem);
-        font-size: 2rem;
-        color: #fff;
-    }
-
-    &::before {
-        content: '<-';
-        left: 0;
-    }
-
-    &::after {
-        content: '->';
         right: 0;
     }
 
-    img {
-        scroll-snap-align: start;
-        width: 100%;
-        height: auto;
+    &__bullet-item {
+        border: 1px solid $primary-text-color;
+        margin: 0 5px 0 5px;
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+
+        a {
+            color: transparent;
+        }
     }
 }
 
 .article {
-    background-color: $background-color-inverted;
     padding-top: .7rem;
 
     &__title {
@@ -168,7 +196,7 @@ html, body {
     }
 
     &__title, &__lead, &__author {
-        color: $primary-text-color-inverted;
+        color: $primary-text-color;
         display: block;
         text-align: center;
     }
@@ -178,7 +206,7 @@ html, body {
     }
 
     &__paragraph {
-        color: $primary-text-color-inverted;
+        color: $primary-text-color;
         margin: 20px;
     }
 }
