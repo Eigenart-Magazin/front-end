@@ -5,11 +5,12 @@
 @import 'container.scss';
 
 html, body {
+    background-color: $background-color;
     height: 100%;
 }
 
 .header {
-    padding: 10px;
+    padding: 10px 10px 0 10px;
     border-bottom: 2px solid #000;
     
     &--has-menu {
@@ -23,8 +24,8 @@ html, body {
     }
 
     &__marquee {
-        background-color: #000;
-        color: #fff;
+        background-color: $background-color-inverted;
+        color: $primary-text-color-inverted;
         border-radius: 10px;
         padding: 5px;
         align-self: center;
@@ -34,7 +35,6 @@ html, body {
 }
 
 .footer {
-    background: $background-color-inverted;
     text-align: center;
     padding: 1px 0;
     height: 100px;
@@ -42,7 +42,6 @@ html, body {
     &__copyright {
         display: inline-block;
         font-size: .7rem;
-        color: $primary-text-color-inverted;
         margin: 10px 0;
     }
 
@@ -56,7 +55,6 @@ html, body {
 
         a {
             font-size: .7rem;
-            color: $primary-text-color-inverted;
             text-decoration: none;
         }
     }
@@ -162,7 +160,15 @@ html, body {
 }
 
 .article {
+    background-color: $background-color-inverted;
+    padding-top: .7rem;
+
+    &__title {
+        margin-top: 0;
+    }
+
     &__title, &__lead, &__author {
+        color: $primary-text-color-inverted;
         display: block;
         text-align: center;
     }
@@ -172,6 +178,7 @@ html, body {
     }
 
     &__paragraph {
+        color: $primary-text-color-inverted;
         margin: 20px;
     }
 }
