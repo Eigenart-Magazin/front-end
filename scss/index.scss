@@ -207,6 +207,39 @@ html, body {
     }
 }
 
+.back-button {
+    display: block;
+    margin-top: 1rem;
+}
+
+.arrow {
+    --thickness: 2px;
+
+    display: block;
+    position: relative;
+    width: 20px;
+    border: var(--thickness) solid $primary-text-color;
+    margin: 10px;
+
+    &__left {
+        &::before {
+            --arrow-size: 10px;
+
+            position: absolute;
+            top: calc(-1 * var(--arrow-size) / 2 - var(--thickness));
+            left: calc(-1 * var(--thickness));
+            content: ' ';
+            display: block;
+            width: var(--arrow-size);
+            height: var(--arrow-size);
+            border: calc(2 * var(--thickness)) solid $primary-text-color;
+            transform: rotate(45deg);
+            border-top: 0;
+            border-right: 0;
+        }
+    }
+}
+
 .article {
     padding-top: .7rem;
 
