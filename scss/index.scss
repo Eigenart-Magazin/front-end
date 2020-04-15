@@ -140,6 +140,8 @@ html, body {
     position: relative;
 
     &__images {
+        width: 85%;
+        margin: auto;
         white-space: nowrap;
         overflow: hidden;
         overflow-x: scroll;
@@ -149,16 +151,16 @@ html, body {
             position: absolute;
             top: calc(50% - 1rem);
             font-size: 2rem;
-            color: #fff;
+            color: $primary-text-color;
         }
     
         &::before {
-            content: '<-';
+            content: '<';
             left: 0;
         }
     
         &::after {
-            content: '->';
+            content: '>';
             right: 0;
         }
     
@@ -170,9 +172,10 @@ html, body {
     }
 
     &__bullet-list {
+        width: 85%;
+        margin: auto;
         display: flex;
-        position: absolute;
-        right: 0;
+        justify-content: flex-end;
     }
 
     &__bullet-item {
