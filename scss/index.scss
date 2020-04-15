@@ -10,14 +10,30 @@ html, body {
 }
 
 .header {
-    color: $primary-text-color-inverted;
     background-color: $background-color-inverted;
     padding: 10px 10px 0 10px;
     border-bottom: 2px solid #000;
     
-    &--has-menu {
-        display: grid;
-        grid-template-columns: 50% 50%;
+    * {
+        color: $primary-text-color-inverted;
+    }
+
+    &__menu {
+        padding: 10px 0;
+        
+        ul {
+            display: flex;
+            justify-content: flex-end;
+        }
+        
+        ul > li {
+            margin: 0 10px;
+        }
+        
+        a {
+            font-size: .8em;
+            text-decoration: none;
+        }
     }
 
     &__logo {
